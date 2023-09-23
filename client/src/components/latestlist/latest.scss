@@ -1,0 +1,130 @@
+.latestWrapper{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 28%;
+  top: 70px;
+
+  .createItemButtons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    .createNewPostBtn{
+      margin-bottom: 20px;
+      width: 50%;
+      align-self: center;
+      @media (max-width: 1100px){
+        display: none;
+      }
+    }
+  }
+
+
+  @media (max-width: 1100px){
+    width: 0;
+  }
+  .latestList {
+    background-color: #fdfdfd;
+    border-radius: 5px;
+    position: -webkit-sticky;
+    border: 1px solid rgba(211, 211, 211, 0.51);
+    @media (max-width: 1100px){
+      display: none;
+    }
+    .latestTitle {
+      padding: 10px;
+      color: gray;
+    }
+
+    .latestItems {
+      ul {
+        list-style: none;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          justify-content: space-between;
+          border-top: 1px solid lightgray;
+          padding: 10px 7px 10px 7px;
+          .latestPostReactions {
+            display: flex;
+            gap: 5px;
+            .latestPostReactionItem {
+              display: flex;
+              align-items: center;
+              gap: 3px;
+
+              span {
+                color: black;
+                font-size: 12px;
+              }
+              .latestPostReactionIconLike {
+                font-size: 15px;
+                color: rgb(255, 0, 0);
+              }
+            }
+          }
+
+          span {
+            flex: 1;
+            font-size: 12px;
+            color: gray;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .latestLink {
+            text-decoration: none;
+            color: inherit;
+            flex: 4;
+
+            h5 {
+              word-break: break-word;
+              cursor: pointer;
+              font-size: 13px;
+
+              &:hover {
+                color: #7451f8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tagsRecommendations{
+    @media (max-width: 1100px){
+      display: none;
+    }
+    h3{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: gray;
+    }
+    .postTags{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+
+  .updatesInfo{
+    @media (max-width: 1100px){
+      display: none;
+    }
+    h3{
+      margin-top: 20px;
+      margin-bottom: 14px;
+      color: gray;
+    }
+    p{
+      font-size: 15px;
+      color: gray;
+      margin-bottom: 7px;
+    }
+  }
+
+}
